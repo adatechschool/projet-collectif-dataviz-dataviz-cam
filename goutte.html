@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #goutte {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="goutte" src="goutte.jpg">
+
+
+  <script>
+
+    setInterval(dropGoutte(),3000)
+    
+    
+    //goutte.onclick = function() {
+    function dropGoutte() {
+        let start = Date.now();
+        let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        goutte.style.top = timePassed / 5 + 'px';
+
+        if (timePassed > 2200) 
+        clearInterval(timer);
+   // goutte.style.
+
+      }, 20);
+    }
+      //}} 
+  </script>
+
+
+</body>
+
+</html>
