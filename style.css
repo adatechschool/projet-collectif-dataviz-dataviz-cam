@@ -5,18 +5,19 @@
 
 .rectangle {
     width  : 600px;
-    height : 400px;
+    height : 500px;
     margin: 10% auto;
-    background : green;
+    background : blue ;
     border : solid black;
   }
 
 .compteur {
     width : 350px;
     height : 200px;
-    margin : 10% auto;
-    background : blue;
+    margin : 5% auto;
+    background : rgb(0, 255, 234);
     border : solid black;
+    border-radius: 10%;
 }
 
 .compteur p {
@@ -24,4 +25,61 @@
     text-align: center;
     padding: 5%;
     font-family: arial;
+}
+
+.terre {
+    width: 550px;
+    height:220px;
+    margin: 5% auto;
+    border: solid black;
+    background: url(nappe-phreatique.jpg);
+    background-size: cover;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    
+}
+
+.herbe {
+    width: 550px;
+    height: 10px;
+    margin: auto;
+    background:url(herbe.jpg);
+    background-size: cover;
+}
+
+.humus {
+    width: 550px;
+    height: 18px;
+    margin: 0% auto ;
+    background: url(humus.jpg);
+    background-size: cover;
+}
+
+.sol {
+    width: 550px;
+    height: 45px;
+    margin: 0% auto;
+    background: url(roche-mère.jpg);
+    background-size: cover;
+}
+
+.nappe {
+    width: 550px;
+    height: 149px;
+    margin: 0% auto;
+    border-bottom-left-radius: 27%;
+    border-bottom-right-radius: 27%;
+    background: url(wave.jpg);
+    background-size: 550px 150px, 550px 150px;
+    background-repeat: repeat-x;
+    animation: flow 20s linear infinite;
+}
+
+@keyframes flow {
+    0% {
+        background-position: -1200px 15px;
+    }
+    100% {
+        background-position: 550px 162px;
+    }
 }
