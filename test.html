@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Data Eau</title>
+        <link href="style.css" rel="stylesheet"> 
+        <script defer src="compteur.js"></script>
+        
+    </head>
+    <body id="backg">
+    <div class = "rectangle" >
+        <div class = "compteur">
+            <p id = "conso-jour"></p>
+            <p id = "conso-seconde"></p>
+        </div>
+    </div> 
+    </body>
+    <script>var div=document.getElementById("backg");
+            let i=0;
+            let image = document.getElementById('image');
+            let images = ['image1.jpg','image2.jpeg','image3.jpg']
+            setInterval(function(){
+                div.style.backgroundImage =`url(${images[i]})`;
+                div.style.width = "100%";
+                div.style.height = "auto";
+                i++;
+                if(i==images.length){
+                    i=0;
+                }
+            }, 5000
+            );
+</script>
+
+
+
+</html>

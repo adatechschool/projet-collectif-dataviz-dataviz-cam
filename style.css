@@ -1,0 +1,27 @@
+#backg{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rectangle {
+    width  : 600px;
+    height : 400px;
+    margin: 10% auto;
+    background : green;
+    border : solid black;
+  }
+
+.compteur {
+    width : 350px;
+    height : 200px;
+    margin : 10% auto;
+    background : blue;
+    border : solid black;
+}
+
+.compteur p {
+    color : black;
+    text-align: center;
+    padding: 5%;
+    font-family: arial;
+}
