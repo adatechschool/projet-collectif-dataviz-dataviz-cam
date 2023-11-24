@@ -50,3 +50,13 @@ getConsoJour(today)
 //          clearInterval(consoMetropole)
 //  }
 // }
+let animation = anime({
+    targets: '.drop',
+    translateY:150,
+    duration: 1500,
+    easing: 'linear',
+    delay: anime.stagger(350),
+    loop: true
+
+    }
+   ) 
