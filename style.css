@@ -83,3 +83,22 @@
         background-position: 550px 162px;
     }
 }
+.drop{
+  width: 90px;
+  height: 90px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  float: left;
+  margin-top: 50px;
+  margin-left: 20px;
+  border: 5px solid #fff;
+
+}
+.cont-gouttes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: 
+}
