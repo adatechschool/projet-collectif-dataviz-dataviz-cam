@@ -1,16 +1,27 @@
+window.onload = (event) => {
+    if (sessionStorage.getItem("conso") != null) {
+        consoPerso = parseFloat(sessionStorage.getItem("conso"))
+    }
+    afficherConso(consoPerso)
+}
+
 let today = new Date();
 let minute = today.getMinutes()
 let seconde = today.getSeconds()
-console.log(today.toString())
-console.log(minute)
-
+//console.log(today.toString())
+//console.log(minute)
+function afficherConso (valeurconso) {
+    document.getElementById('conso-seconde').innerText ="Depuis que vous êtes connecté.e vous avez consommé "+ (valeurconso.toFixed(2))+" mL";
+}
+console.log("sessionstorage",sessionStorage.getItem("conso"))
 let consoPerso = 0
 let compteur = setInterval(calculLitreParSecondeParPersonne,1000); 
 
  function calculLitreParSecondeParPersonne(){
-    document.getElementById('conso-seconde').innerText ="Depuis que vous êtes connecté.e vous avez consommé "+ (consoPerso.toFixed(2))+" mL";
     consoPerso += 1.73611;
-    if (consoPerso>20){
+    afficherConso(consoPerso);
+    sessionStorage.setItem("conso", consoPerso);
+    if (consoPerso>50){
          clearInterval(compteur)  
     }
  }
