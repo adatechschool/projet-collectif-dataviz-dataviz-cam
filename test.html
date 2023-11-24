@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <title>Data Eau</title>
         <link href="style.css" rel="stylesheet"> 
+        <script  defer src="anime.js"></script>
         <script defer src="compteur.js"></script>
-        
     </head>
     <body id="backg">
     <div class = "rectangle" >
@@ -13,24 +13,36 @@
             <p id = "conso-jour"></p>
             <p id = "conso-seconde"></p>
         </div>
+    
+    <div class = "terre">
+        <div class = "herbe"></div>
+        <div class = "humus"></div>
+        <div class = "sol"></div>
+        <div class = "nappe"></div>
+    </div>
     </div> 
+    <div class=" cont-gouttes">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+    </div>
+    <script>
+        var div=document.getElementById("backg");
+        let i=0;
+        let image = document.getElementById('image');
+        let images = ['image1.jpg','image2.jpg','image8.jpg']
+        setInterval(function(){
+        div.style.backgroundImage =`url(${images[i]})`;
+        div.style.width = "100%";
+        div.style.height = "auto";
+        i++;
+        if(i==images.length){
+        i=0;
+        }
+        }, 3000
+        );
+    </script>
     </body>
-    <script>var div=document.getElementById("backg");
-            let i=0;
-            let image = document.getElementById('image');
-            let images = ['image1.jpg','image2.jpeg','image3.jpg']
-            setInterval(function(){
-                div.style.backgroundImage =`url(${images[i]})`;
-                div.style.width = "100%";
-                div.style.height = "auto";
-                i++;
-                if(i==images.length){
-                    i=0;
-                }
-            }, 5000
-            );
-</script>
-
-
-
+   
 </html>
