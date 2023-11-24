@@ -36,6 +36,7 @@
     background-size: cover;
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
+    overflow: hidden;
     
 }
 
@@ -65,12 +66,13 @@
 
 .nappe {
     width: 550px;
-    height: 149px;
+    height: 151px;
     margin: 0% auto;
+    margin-bottom: 0%;
     border-bottom-left-radius: 27%;
     border-bottom-right-radius: 27%;
     background: url(wave.jpg);
-    background-size: 550px 150px, 550px 150px;
+    background-size: 550px 149px;
     background-repeat: repeat-x;
     animation: flow 20s linear infinite;
 }
