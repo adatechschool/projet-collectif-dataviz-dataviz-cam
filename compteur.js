@@ -51,7 +51,7 @@ getConsoJour(today)
 //  }
 // }
 let animation = anime({
-    targets: '.drop',
+    targets: '.drop-container',
     translateY: 150,
     duration: 1500,
     easing: 'linear',
