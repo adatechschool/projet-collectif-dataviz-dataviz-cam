@@ -7,7 +7,7 @@ window.onload = (event) => {
 fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=10&fields=date_mesure,profondeur_nappe&sort=desc")
     .then(res => res.json())
     .then(données =>{
-        console.log(données);
+        console.log(données.data[0].profondeur_nappe);
         document.getElementById('nappe-villeurbanne').innerText = "profondeur de la nappe : "+ données.data[0].profondeur_nappe+ " m"
 })
     let today = new Date();
@@ -56,7 +56,7 @@ getConsoJour(today)
 // }
 let animation = anime({
     targets: '.drop',
-    translateY: 150,
+    translateY:150,
     duration: 1500,
     easing: 'linear',
     delay: anime.stagger(350),
