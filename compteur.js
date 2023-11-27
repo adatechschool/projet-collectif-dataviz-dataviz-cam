@@ -4,8 +4,13 @@ window.onload = (event) => {
     }
     afficherConso(consoPerso)
 }
-
-let today = new Date();
+fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=10&fields=date_mesure,profondeur_nappe&sort=desc")
+    .then(res => res.json())
+    .then(données =>{
+        console.log(données);
+        document.getElementById('nappe-villeurbanne').innerText = "profondeur de la nappe : "+ données.data[0].profondeur_nappe+ " m"
+})
+    let today = new Date();
 let minute = today.getMinutes()
 let seconde = today.getSeconds()
 //console.log(today.toString())
@@ -39,7 +44,6 @@ function getConsoJour(date) {
     //console.log(document.getElementById('conso-jour'))
 }
 getConsoJour(today)
-
 
 // let consoMetropole = 0
 // 
