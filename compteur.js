@@ -52,7 +52,7 @@ getConsoJour(today)
 // }
 let animation = anime({
     targets: '.drop',
-    translateY:150,
+    translateY: 150,
     duration: 1500,
     easing: 'linear',
     delay: anime.stagger(350),
