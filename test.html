@@ -3,10 +3,21 @@
     <head>
         <meta charset="utf-8" />
         <title>Data Eau</title>
-        <link href="style.css" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
         <script  defer src="node_modules\animejs\lib\anime.min.js"> </script>
         <script defer src="compteur.js"></script>
+<h1>CONSOMMATION D'EAU EN FRANCE</h1>
     </head>
+<h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
+     pour la préservation des nappes phréatiques devient de plus en plus évidente. <br>
+      La préservation de ces ressources vitales ne concerne pas seulement les autorités publiques,<br>
+       mais aussi chaque citoyen, appelé à adopter des comportements éco-responsables <br>
+        afin de garantir un avenir durable pour nos réserves d'eau souterraine.
+
+</h3>
     <body id="backg">
     <div class = "rectangle" >
         <div class = "compteur">
@@ -31,7 +42,7 @@
         var div=document.getElementById("backg");
         let i=0;
         let image = document.getElementById('image');
-        let images = ['image1.jpg','image2.jpg','image8.jpg']
+        let images = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg','img11.jpg','img12.jpg','img13.jpg','img14.jpg','img15.jpg','img16.jpg','img17.jpg','img18.jpg','img19.jpg']
         setInterval(function(){
         div.style.backgroundImage =`url(${images[i]})`;
         div.style.width = "100%";
