@@ -43,6 +43,11 @@
         <div class="drop-container"><div class="drop"></div></div>
         <div class="drop-container"><div class="drop"></div></div>
     </div>
+    <div class="canva">
+        <canvas id ="myChart"></canvas>
+    </div>
+   
+
     <div> 
         <canvas id="graphe-nappe"></canvas>
      </div>      
@@ -62,7 +67,30 @@
         }
         }, 3000
         );
+        const barCanvas = document.getElementById('myChart');
+            new Chart(barCanvas, {
+              type: 'bar',
+              data: {
+                labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
+                datasets: [{
+                  label: '% eau consommée ',
+                  data: [43,42,7,8],
+                  backgroundColor:['aquamarine'],
+                
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+               
+              }
+            });
     </script>
+    
+    
     </body>
    
 </html>
