@@ -39,7 +39,7 @@ h3 {
     width  : 600px;
     height : 500px;
     margin: 10% auto;
-    background :lightgreen;
+    background :linear-gradient(rgb(10, 119, 10),rgb(0, 255, 153));
     border : solid black;
     
 }
@@ -137,4 +137,10 @@ h3 {
   justify-content: center;
   transform: translateY(-150px);
   
+}
+
+#graphe-nappe{
+    background-color: aqua;
+    border: solid black;
+    margin: 5% auto;
 }
