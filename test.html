@@ -5,10 +5,14 @@
         <title>Data Eau</title>
         <link href="style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <script  defer src="anime.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <script defer src="anime.js"></script>
         <script defer src="compteur.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
 <h1>CONSOMMATION D'EAU EN FRANCE</h1>
     </head>
 <h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
@@ -38,6 +42,11 @@
         <div class="drop-container"><div class="drop"></div></div>
         <div class="drop-container"><div class="drop"></div></div>
     </div>
+    <div class="canva">
+        <canvas id ="myChart"></canvas>
+    </div>
+   
+
     <script>
         var div=document.getElementById("backg");
         let i=0;
@@ -53,7 +62,30 @@
         }
         }, 3000
         );
+        const barCanvas = document.getElementById('myChart');
+            new Chart(barCanvas, {
+              type: 'bar',
+              data: {
+                labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
+                datasets: [{
+                  label: '% eau consommée ',
+                  data: [43,42,7,8],
+                  backgroundColor:['aquamarine'],
+                
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+               
+              }
+            });
     </script>
+    
+    
     </body>
    
 </html>
