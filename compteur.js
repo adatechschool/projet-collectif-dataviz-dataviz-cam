@@ -2,6 +2,7 @@ window.onload = (event) => {
     if (sessionStorage.getItem("conso") != null) {
         consoPerso = parseFloat(sessionStorage.getItem("conso"))
     }
+    div.style.backgroundImage = `url(image8.jpg)`;
     afficherConso(consoPerso)
 }
 fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=10&fields=date_mesure,profondeur_nappe&sort=desc")
@@ -10,7 +11,21 @@ fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BS
         console.log(données.data[0].profondeur_nappe);
         document.getElementById('nappe-villeurbanne').innerText = "profondeur de la nappe : "+ données.data[0].profondeur_nappe+ " m"
 })
-    let today = new Date();
+
+let profondeurs = []
+async function recupData () {
+    const res = await fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=10&fields=date_mesure,profondeur_nappe&sort=desc")
+    //console.log(res)
+    const données = await res.json();
+    console.log(données)
+    for (let i = 0; i<données.data.length; i++){
+        profondeurs.push(données.data[i].profondeur_nappe)
+    }
+    console.log(profondeurs)
+}
+recupData();
+
+let today = new Date();
 let minute = today.getMinutes()
 let seconde = today.getSeconds()
 //console.log(today.toString())
