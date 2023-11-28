@@ -9,6 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
         <script  defer src="node_modules\animejs\lib\anime.min.js"> </script>
         <script defer src="compteur.js"></script>
+        <script defer src="graphique.js"></script>
+
 <h1>CONSOMMATION D'EAU EN FRANCE</h1>
     </head>
 <h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
@@ -25,6 +27,7 @@
             <p id = "conso-seconde"></p>
             <p id = "nappe-villeurbanne"></p>
         </div>
+  
     
     <div class = "terre">
         <div class = "herbe"></div>
@@ -55,6 +58,10 @@
         }, 3000
         );
     </script>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </body>
-   
+<script src="anime.min.js"></script>
 </html>
