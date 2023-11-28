@@ -5,14 +5,14 @@
         <title>Data Eau</title>
         <link href="style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <script defer src="anime.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <script  defer src="node_modules\animejs\lib\anime.min.js"> </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script defer src="compteur.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
+        <script defer src="graph.js"></script>
+        
+        
 <h1>CONSOMMATION D'EAU EN FRANCE</h1>
     </head>
 <h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
@@ -49,6 +49,10 @@
     </div>
    
 
+    <div> 
+        <canvas id="graphe-nappe"></canvas>
+     </div>      
+    
     <script>
         var div=document.getElementById("backg");
         let i=0;
@@ -57,34 +61,14 @@
         setInterval(function(){
         div.style.backgroundImage =`url(${images[i]})`;
         div.style.width = "100%";
-        div.style.height = "auto";
+        div.style.height = "100%";
         i++;
         if(i==images.length){
         i=0;
         }
         }, 3000
         );
-        const barCanvas = document.getElementById('myChart');
-            new Chart(barCanvas, {
-              type: 'bar',
-              data: {
-                labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
-                datasets: [{
-                  label: '% eau consommée ',
-                  data: [43,42,7,8],
-                  backgroundColor:['aquamarine'],
-                
-                }]
-              },
-              options: {
-                scales: {
-                  y: {
-                    beginAtZero: true
-                  }
-                }
-               
-              }
-            });
+        
     </script>
     
     
