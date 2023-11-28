@@ -1,3 +1,27 @@
+const barCanvas = document.getElementById('myChart');
+            new Chart(barCanvas, {
+              type: 'bar',
+              data: {
+                labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
+                datasets: [{
+                  label: '% eau consommée ',
+                  data: [43,42,7,8],
+                  backgroundColor:['aquamarine'],
+                
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+               
+              }
+            });
+
+
+
 
 let profondeurs = []
 function recupData () {
