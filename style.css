@@ -16,7 +16,21 @@ body {
     background-size: cover;
     transition: 1s;   
 }
-
+#backg2{
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;  
+}
+#backg3{
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;  
+}
+#backg4{
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;  
+}
 section {
     height: 100vh;
     width: 100vw;
@@ -24,18 +38,7 @@ section {
     display: flex;
     flex-direction: column;
 }
-section:nth-child(1) {
-    background: lightblue;
-  }
-  section:nth-child(2) {
-    background: lightgreen;
-  }
-  section:nth-child(3) {
-    background: purple;
-  }
-  section:nth-child(4) {
-    background: red;
-  }
+
  
 h1 {
     text-align: center;

@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <script  defer src="anime.js"> </script>
+        <script defer src="anime.js"> </script>
         <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script defer src="compteur.js"></script>
         <script defer src="graph.js"></script>
@@ -28,7 +28,7 @@
         <button type="button" class="voir-conso">Découvre ta conso d'eau</button>
 </section>    
 
-<section id="backg" >
+<section id="backg2" >
     <div class = "rectangle" >
         <div class = "compteur">
             <p id = "conso-jour"></p>
@@ -53,37 +53,17 @@
     </div>
 </section>
     
-<section id="backg">
+<section id="backg3">
     <div class="canva">
         <canvas id ="myChart"></canvas>
     </div>
 </section>
 
-<section id="backg">
+<section id="backg4">
     <div> 
         <canvas id="graphe-nappe"></canvas>
      </div>      
 </section>    
     
-    <script>
-        var div=document.getElementById("backg");
-        let i=0;
-        let image = document.getElementById('image');
-        let images = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg','img11.jpg','img12.jpg','img13.jpg','img14.jpg','img15.jpg','img16.jpg','img17.jpg','img18.jpg','img19.jpg']
-        setInterval(function(){
-        div.style.backgroundImage =`url(${images[i]})`;
-        //div.style.width = "100%";
-        //div.style.height = "100%";
-        i++;
-        if(i==images.length){
-        i=0;
-        }
-        }, 3000
-        );
-        
-    </script>
-    
-    
     </body>
-<script src="anime.min.js"></script>
 </html>
