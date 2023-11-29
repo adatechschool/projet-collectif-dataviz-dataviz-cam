@@ -72,7 +72,7 @@ getConsoJour(today)
 let animation1 = anime({
     targets: '.drop-container1',
     translateY: 150,
-    duration: 1495,
+    duration: 1500,
     easing: 'linear',
     loop: true
 
@@ -81,7 +81,7 @@ let animation1 = anime({
 let animation2 =anime({
     targets: '.drop-container2',
     translateY: 150,
-    duration: 1500,
+    duration: 1450,
     easing: 'linear',
     loop: true
 
@@ -90,7 +90,7 @@ let animation2 =anime({
 let animation3 = anime({
     targets: '.drop-container3',
     translateY: 100,
-    duration: 1250,
+    duration: 1430,
     easing: 'linear',
     loop: true
 
@@ -99,7 +99,7 @@ let animation3 = anime({
 let animation4 =anime({
     targets: '.drop-container4',
     translateY: 120,
-    duration: 1300,
+    duration: 1420,
     easing: 'linear',
     loop: true
 }
