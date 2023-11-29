@@ -69,13 +69,39 @@ getConsoJour(today)
 //          clearInterval(consoMetropole)
 //  }
 // }
-let animation = anime({
-    targets: '.drop-container',
+let animation1 = anime({
+    targets: '.drop-container1',
     translateY: 150,
-    duration: 1500,
+    duration: 1495,
     easing: 'linear',
-    delay: anime.stagger(350),
     loop: true
 
     }
-   ) 
+   )
+let animation2 =anime({
+    targets: '.drop-container2',
+    translateY: 150,
+    duration: 1500,
+    easing: 'linear',
+    loop: true
+
+    }
+)
+let animation3 = anime({
+    targets: '.drop-container3',
+    translateY: 100,
+    duration: 1250,
+    easing: 'linear',
+    loop: true
+
+    }
+)
+let animation4 =anime({
+    targets: '.drop-container4',
+    translateY: 120,
+    duration: 1300,
+    easing: 'linear',
+    loop: true
+}
+
+)

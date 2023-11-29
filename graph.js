@@ -7,6 +7,7 @@ const barCanvas = document.getElementById('myChart');
                   label: '% eau consommée ',
                   data: [43,42,7,8],
                   backgroundColor:['aquamarine'],
+                  borderWidth:1,
                 
                 }]
               },
@@ -15,7 +16,14 @@ const barCanvas = document.getElementById('myChart');
                   y: {
                     beginAtZero: true
                   }
+                },
+                plugins:{
+                  title:{
+                  display: true,
+                  text: 'Consommation en eau '
                 }
+                }
+                
                
               }
             });
