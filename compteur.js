@@ -2,6 +2,9 @@ window.onload = (event) => {
     if (sessionStorage.getItem("conso") != null) {
         consoPerso = parseFloat(sessionStorage.getItem("conso"))
     }
+    if (sessionStorage.getItem("ville") != null) {
+        consoVilleurbanne = parseFloat(sessionStorage.getItem("ville"))
+    }
     div.style.backgroundImage = `url(img1.jpg)`;
     div2.style.backgroundImage = `url(img6.jpg)`;
     div3.style.backgroundImage = `url(img16.jpg)`;
@@ -59,6 +62,7 @@ getConsoJour(today)
  function calculLitreParSecondeVilleurbanne(){
       consoVilleurbanne += 268.716842;
       afficherConsoVilleurbanne(consoVilleurbanne);
+      sessionStorage.setItem("ville",consoVilleurbanne);
       if (consoVilleurbanne>2000){
           clearInterval(compteurVille)
   }
