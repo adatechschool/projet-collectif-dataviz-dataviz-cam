@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Data Eau</title>
+        <link href="style2.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <script  defer src="node_modules\animejs\lib\anime.min.js"> </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="compteur.js"></script>
+        <script defer src="graph.js"></script>
+        <h1>CONSOMMATION D'EAU EN FRANCE & NIVEAU DES NAPPES PHREATIQUES</h1>
+    </head>
+<body>
+<section id="home" class="home">
+    <div class="home-content container"></div>
+        <div class="home-text">
+            
+            <h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
+                pour la préservation des nappes phréatiques devient de plus en plus évidente. <br>
+                La préservation de ces ressources vitales ne concerne pas seulement les autorités publiques,<br>
+                mais aussi chaque citoyen, appelé à adopter des comportements éco-responsables <br>
+                afin de garantir un avenir durable pour nos réserves d'eau souterraine.
+            </h3>
+            <a href="#" class="btn">Cliquez ici pour découvir les statistiques</a>
+        </div>
+    </div>
+</section>
+
+<section id="compteur">
+            <h5>CONSOMMATION EN TEMPS REEL</h5>
+    <div class = "rectangle" >
+        <div class = "compteur">
+            <p id = "conso-jour"></p>
+            <p id = "conso-seconde"></p>
+            <p id = "nappe-villeurbanne"></p>
+        </div>
+  
+
+    <div class = "terre">
+        <div class = "herbe"></div>
+        <div class = "humus"></div>
+        <div class = "sol"></div>
+        <div class = "nappe"></div>
+    </div> 
+    </div>
+</section>
+    <div class="fleche" id="fleche">
+        <i class='bx bx-down-arrow-alt'></i>
+    </div>
+
+<section id="gouttes">
+    <div class=" cont-gouttes">
+        <div class="drop-container"><div class="drop"></div></div>
+        <div class="drop-container"><div class="drop"></div></div>
+        <div class="drop-container"><div class="drop"></div></div>
+        <div class="drop-container"><div class="drop"></div></div>
+    </div>
+</section>
+
+
+</body>
+<script src="anime.min.js"></script>
+</html>
+
+
+    
