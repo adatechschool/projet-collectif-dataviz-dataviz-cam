@@ -60,15 +60,16 @@ function getConsoJour(date) {
 }
 getConsoJour(today)
 
-// let consoMetropole = 0
-// 
-// function calculLitreParSecondeParPersonneMetropole(){
-//      console.log((consoPerso.toFixed(2))+" L");
-//      consoMetropole += 2459.12212;
-//      if (consoMetropole>20){
-//          clearInterval(consoMetropole)
-//  }
-// }
+ let consoVilleurbanne = 0
+ let compteurVille = setInterval(calculLitreParSecondeVilleurbanne,1000);
+ function calculLitreParSecondeVilleurbanne(){
+      document.getElementById('conso-ville').innerText ="Depuis que vous êtes connecté.e Villeurbanne a consommé "+ (consoVilleurbanne.toFixed(2))+" L";
+      consoVilleurbanne += 268.716842;
+      if (consoVilleurbanne>2000){
+          clearInterval(compteurVille)
+  }
+ }
+
 let animation = anime({
     targets: '.drop-container',
     translateY: 150,
