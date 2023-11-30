@@ -6,7 +6,7 @@ const barCanvas = document.getElementById('myChart');
                 datasets: [{
                   label: '% eau consommée ',
                   data: [43,42,7,8],
-                  backgroundColor:['aquamarine'],
+                  backgroundColor:['blue'],
                   borderWidth:1,
                 
                 }]
@@ -20,7 +20,13 @@ const barCanvas = document.getElementById('myChart');
                 plugins:{
                   title:{
                   display: true,
-                  text: 'Consommation en eau '
+                  text: 'Consommation en eau ',
+                  color:'black',
+                  font : {
+                    size:35
+                  }
+                  
+                  
                 }
                 }
                 
