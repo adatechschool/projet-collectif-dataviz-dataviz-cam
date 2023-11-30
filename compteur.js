@@ -2,6 +2,9 @@ window.onload = (event) => {
     if (sessionStorage.getItem("conso") != null) {
         consoPerso = parseFloat(sessionStorage.getItem("conso"))
     }
+    if (sessionStorage.getItem("ville") != null) {
+        consoVilleurbanne = parseFloat(sessionStorage.getItem("ville"))
+    }
     div.style.backgroundImage = `url(img1.jpg)`;
     div2.style.backgroundImage = `url(img6.jpg)`;
     div3.style.backgroundImage = `url(img16.jpg)`;
@@ -59,6 +62,7 @@ getConsoJour(today)
  function calculLitreParSecondeVilleurbanne(){
       consoVilleurbanne += 268.716842;
       afficherConsoVilleurbanne(consoVilleurbanne);
+      sessionStorage.setItem("ville",consoVilleurbanne);
       if (consoVilleurbanne>2000){
           clearInterval(compteurVille)
   }
@@ -76,7 +80,7 @@ let animation1 = anime({
 let animation2 =anime({
     targets: '.drop-container2',
     translateY: 220,
-    duration: 825,
+    duration: 819,
     easing: 'linear',
     loop: true
 
@@ -85,7 +89,7 @@ let animation2 =anime({
 let animation3 = anime({
     targets: '.drop-container3',
     translateY: 220,
-    duration: 1750,
+    duration: 1488,
     easing: 'linear',
     loop: true
 
@@ -94,7 +98,7 @@ let animation3 = anime({
 let animation4 =anime({
     targets: '.drop-container4',
     translateY: 220,
-    duration: 1700,
+    duration: 1470,
     easing: 'linear',
     loop: true
 }

@@ -17,13 +17,16 @@ const barCanvas = document.getElementById('myChart');
                   y: {
                     beginAtZero: true,
                     color:'black',
+                    fontsSize:25,
                     
-                  }
+                  },
+            
                 },
                 plugins:{
                   legend:{
                     labels:{
                       color:'black',
+                      
                       
                       
                     }
@@ -34,7 +37,7 @@ const barCanvas = document.getElementById('myChart');
                   text: 'Consommation en eau ',
                   color:'black',
                   font:{
-                    size:30
+                    size:35
     
                   }
           
