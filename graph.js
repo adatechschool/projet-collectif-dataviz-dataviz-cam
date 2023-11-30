@@ -1,3 +1,4 @@
+
 const barCanvas = document.getElementById('myChart');
             new Chart(barCanvas, {
               type: 'bar',
@@ -8,17 +9,47 @@ const barCanvas = document.getElementById('myChart');
                   data: [43,42,7,8],
                   backgroundColor:['blue'],
                   borderWidth:1,
+                  borderColor:'black',
                 
                 }]
               },
               options: {
                 color : 'black',
                 scales: {
+                  x:{
+                    ticks:{
+                      color:'black',
+                    },
+                    grid:{
+                      color:'black',
+                    }
+                  },
                   y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    color:'black',
+                    fontsSize:25,
+                    ticks:{
+                      color:'black'
+                    },
+               
+                  grid:{
+                    color:'black',
+
                   }
+                    
+                  },
+            
                 },
                 plugins:{
+                  legend:{
+                    labels:{
+                      color:'black',
+                      
+                      
+                      
+                    }
+
+                  },
                   title:{
                   display: true,
                   text: 'Consommation en eau ',
@@ -79,6 +110,7 @@ const ctx = document.getElementById('graphe-nappe');
                   }
                 }
                 },
+                color:'black',
         title: {
             display: true,
             text: 'Nappe de Villeurbanne',

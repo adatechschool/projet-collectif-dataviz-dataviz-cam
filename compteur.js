@@ -38,7 +38,7 @@ let compteur = setInterval(calculLitreParSecondeParPersonne,1000);
     consoPerso += 1.73611;
     afficherConso(consoPerso);
     sessionStorage.setItem("conso", consoPerso);
-    if (consoPerso=1000.00){
+    if (consoPerso==1000.00){
         alert ("Déjà un litre!")
     }
     // if (consoPerso<50){
