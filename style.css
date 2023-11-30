@@ -11,11 +11,27 @@ body {
     margin: 0;
 }
 
-#backg{
+#backg1{
     background-repeat: no-repeat;
     background-size: cover;
     transition: 1s;   
 }
+#backg2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;   
+}
+#backg3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;   
+}
+#backg4{
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;   
+}
+<<<<<<< HEAD
 #backg2{
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,6 +47,8 @@ body {
   background-size: cover;
   transition: 1s;  
 }
+=======
+>>>>>>> 41a37a63e6b7dc22f2f1912dceffbaa33d48be4f
 section {
     height: 100vh;
     width: 100vw;
@@ -39,7 +57,10 @@ section {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> 41a37a63e6b7dc22f2f1912dceffbaa33d48be4f
 h1 {
     text-align: center;
     font-style: 'Roboto';
@@ -75,7 +96,7 @@ button {
 }
 .rectangle {
     width  : 600px;
-    height : 600px;
+    height : 570px;
     margin: 5% auto;
     background :linear-gradient(rgb(10, 119, 10),rgb(0, 255, 153));
     border : solid black;
@@ -85,7 +106,7 @@ button {
 
 .compteur {
     width : 350px;
-    height : 300px;
+    height : 230px;
     margin : 5% auto;
     background :linear-gradient(white,grey);
     border : solid black;
@@ -95,7 +116,7 @@ button {
 .compteur p {
     color : black;
     text-align: center;
-    padding: 5%;
+    padding: 2%;
     font-family: 'Oswald';
     font-weight: bold;
 }
@@ -103,7 +124,7 @@ button {
 .terre {
     width: 550px;
     height:220px;
-    margin: 5% auto;
+    margin: 10% auto;
     border: solid black;
     background: url(nappe-phreatique.jpg);
     background-size: cover;
@@ -161,7 +182,7 @@ button {
 .drop{
   width: 90px;
   height: 90px;
-  background-color: aquamarine;
+    background:linear-gradient(rgb(74, 74, 204) ,#00B4D8) ;
   border-radius: 50% ;
   border: 5px solid #fff;
   border-top-right-radius: 0%;
@@ -171,11 +192,11 @@ button {
 
 }
 .cont-gouttes{
-  display: flex;
+display: flex;
   align-items: center;
   justify-content: center;
   transform: translateY(-100px);
-  margin: 0%;
+  margin: -3% auto;
   
 }
 #myChart{

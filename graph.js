@@ -4,9 +4,10 @@ const barCanvas = document.getElementById('myChart');
               data: {
                 labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
                 datasets: [{
-                  label: '% eau consommée ',
                   data: [43,42,7,8],
-                  backgroundColor:['aquamarine'],
+                  label: '% eau consommée ',
+                  backgroundColor:['blue'],
+                  borderColor:'black',
                   borderWidth:1,
                 
                 }]
@@ -14,13 +15,29 @@ const barCanvas = document.getElementById('myChart');
               options: {
                 scales: {
                   y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    color:'black',
+                    
                   }
                 },
                 plugins:{
+                  legend:{
+                    labels:{
+                      color:'black',
+                      
+                      
+                    }
+
+                  },
                   title:{
                   display: true,
-                  text: 'Consommation en eau '
+                  text: 'Consommation en eau ',
+                  color:'black',
+                  font:{
+                    size:30
+    
+                  }
+          
                 }
                 }
                 
