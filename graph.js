@@ -6,12 +6,13 @@ const barCanvas = document.getElementById('myChart');
                 datasets: [{
                   label: '% eau consommée ',
                   data: [43,42,7,8],
-                  backgroundColor:['aquamarine'],
+                  backgroundColor:['blue'],
                   borderWidth:1,
                 
                 }]
               },
               options: {
+                color : 'black',
                 scales: {
                   y: {
                     beginAtZero: true
@@ -20,11 +21,15 @@ const barCanvas = document.getElementById('myChart');
                 plugins:{
                   title:{
                   display: true,
-                  text: 'Consommation en eau '
+                  text: 'Consommation en eau ',
+                  color:'black',
+                  font : {
+                    size:35
+                  }
+                  
+                  
                 }
                 }
-                
-               
               }
             });
 
@@ -35,7 +40,7 @@ let profondeurs = []
 function recupData () {
     let datas =[]
     let dates = []
-    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=50&fields=date_mesure,profondeur_nappe&sort=desc")
+    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques_tr?bss_id=BSS001TMCR&size=100&fields=date_mesure,profondeur_nappe&sort=desc")
     .then(res => res.json())
     .then(données =>{
     console.log(données)
@@ -48,32 +53,63 @@ const ctx = document.getElementById('graphe-nappe');
   new Chart(ctx, {
     type: 'line',
     data: {
+      color : 'black',
       labels: dates.reverse(),
       datasets: [
         {
-        label: 'profondeur de l\'eau au point de mesure en mètre',
+        label: 'profondeur de l\'eau au point de mesure en mètres toutes les 3 heures',
         data: datas.reverse(),
-        borderWidth: 1
+        borderWidth: 1,
+        borderColor : 'black',
+        backgroundColor : 'blue'
         }],
     },
     options: {
         responsive: true,
+        color : 'black',
         plugins: {
             legend: {
                 position: 'top',
+                color: 'black',
+                labels : {
+                  font :{
+                    color :'black',
+                    size : 14,
+                    weight : 'bold',
+                  }
+                }
                 },
         title: {
             display: true,
-            text: 'Nappe de Villeurbanne'
+            text: 'Nappe de Villeurbanne',
+            color : 'black',
+            font : {
+              size :16,
+              weight: 'bold'
+            }
               }},
       scales: {
         y: {
           beginAtZero: false,
-          reverse : true
+          reverse : true,
+          ticks : {
+            color :'black'
+          },
+          grid : {
+            color: 'blue'
+          }
+      },
+      x: {
+        ticks:{
+          color : 'black'
+        },
+        grid : {
+        color: 'blue'
         }
       }
+      
     }
-  })
+  }})
     });
     //return datas
 }

@@ -38,9 +38,12 @@ let compteur = setInterval(calculLitreParSecondeParPersonne,1000);
     consoPerso += 1.73611;
     afficherConso(consoPerso);
     sessionStorage.setItem("conso", consoPerso);
-    if (consoPerso>50){
-         clearInterval(compteur)  
+    if (consoPerso=1000.00){
+        alert ("Déjà un litre!")
     }
+    // if (consoPerso<50){
+    //      clearInterval(compteur)  
+    // }
  }
 
 let consoJour = 0;
@@ -63,9 +66,9 @@ getConsoJour(today)
       consoVilleurbanne += 268.716842;
       afficherConsoVilleurbanne(consoVilleurbanne);
       sessionStorage.setItem("ville",consoVilleurbanne);
-      if (consoVilleurbanne>2000){
-          clearInterval(compteurVille)
-  }
+//       if (consoVilleurbanne>2000){
+//           clearInterval(compteurVille)
+//   }
  }
 
 let animation1 = anime({
