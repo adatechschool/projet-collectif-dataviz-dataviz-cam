@@ -1,23 +1,40 @@
+
 const barCanvas = document.getElementById('myChart');
             new Chart(barCanvas, {
               type: 'bar',
               data: {
                 labels: ['Agriculture','Eau potable','Activités Industrielles', 'Electricité'],
                 datasets: [{
-                  data: [43,42,7,8],
                   label: '% eau consommée ',
+                  data: [43,42,7,8],
                   backgroundColor:['blue'],
-                  borderColor:'black',
                   borderWidth:1,
+                  borderColor:'black',
                 
                 }]
               },
               options: {
                 scales: {
+                  x:{
+                    ticks:{
+                      color:'black',
+                    },
+                    grid:{
+                      color:'black',
+                    }
+                  },
                   y: {
                     beginAtZero: true,
                     color:'black',
                     fontsSize:25,
+                    ticks:{
+                      color:'black'
+                    },
+               
+                  grid:{
+                    color:'black',
+
+                  }
                     
                   },
             
@@ -36,11 +53,11 @@ const barCanvas = document.getElementById('myChart');
                   display: true,
                   text: 'Consommation en eau ',
                   color:'black',
-                  font:{
+                  font : {
                     size:35
-    
                   }
-          
+                  
+                  
                 }
                 }
                 
@@ -73,7 +90,8 @@ const ctx = document.getElementById('graphe-nappe');
         {
         label: 'profondeur de l\'eau au point de mesure en mètre',
         data: datas.reverse(),
-        borderWidth: 1
+        borderWidth: 1,
+        backgroundColor:'black'
         }],
     },
     options: {
@@ -82,6 +100,7 @@ const ctx = document.getElementById('graphe-nappe');
             legend: {
                 position: 'top',
                 },
+                color:'black',
         title: {
             display: true,
             text: 'Nappe de Villeurbanne'

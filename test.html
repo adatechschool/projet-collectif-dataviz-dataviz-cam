@@ -4,6 +4,9 @@
         <meta charset="utf-8" />
         <title>Data Eau</title>
         <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
@@ -30,6 +33,7 @@
 </section>    
 
 <section id="backg2" >
+    <h2>CONSOMMATION EN TEMPS RÉEL</h2>
     <div class = "rectangle" >
         <div class = "compteur">
             <p id = "conso-jour"></p>
@@ -64,29 +68,12 @@
 </section>
 
 <section id="backg4">
+    <h4>NIVEAU DE LA NAPPE PHRÉATIQUE EN TEMPS RÉEL</h4>
     <div> 
         <canvas id="graphe-nappe"></canvas>
      </div>      
 </section>    
-    
-    <script>
-        var div=document.getElementById("backg");
-        let i=0;
-        let image = document.getElementById('image');
-        let images = ['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg','img10.jpg','img11.jpg','img12.jpg','img13.jpg','img14.jpg','img15.jpg','img16.jpg','img17.jpg','img18.jpg','img19.jpg']
-        setInterval(function(){
-        div.style.backgroundImage =`url(${images[i]})`;
-        //div.style.width = "100%";
-        //div.style.height = "100%";
-        i++;
-        if(i==images.length){
-        i=0;
-        }
-        }, 3000
-        );
-        
-    </script>
-    
-    
+
     </body>
+
 </html>
