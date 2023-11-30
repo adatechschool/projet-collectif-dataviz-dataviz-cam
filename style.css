@@ -72,6 +72,7 @@ button {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5% auto;
+    z-index: auto;
 }
 .rectangle {
     width  : 600px;
@@ -179,7 +180,7 @@ display: flex;
 }
 #myChart{
   background-color: grey;
-  margin: 20% auto;
+  margin: 15% auto 5%;
   width: 500px;
   display: flex;
   align-items: center;
