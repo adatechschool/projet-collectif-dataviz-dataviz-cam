@@ -3,36 +3,89 @@
     <head>
         <meta charset="utf-8" />
         <title>Data Eau</title>
-        <link href="style.css" rel="stylesheet"> 
-        <script type="text/javascript" src="https://www.planetoscope.com/widget.php?id=243&f=2"></script>
-        
-    </head>
-    <body id="backg">
-        <header>
-
-        </header>
-        
-        <script>
-            var div=document.getElementById("backg");
-            let i=0;
-            let image = document.getElementById('image');
-            let images = ['image8.jpg', 'image2.jpg','image5.jpg']
-            setInterval(function(){
-                div.style.backgroundImage =`url(${images[i]})`;
-                div.style.width = "100%";
-                div.style.height = "auto";
-                i++;
-                if(i==images.length){
-                    i=0;
-                }
-            }, 1000
-            );
-        </script>
-        
-        
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <script defer src="background.js"></script>
+        <script defer src="node_modules\animejs\lib\anime.js"> </script>
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="compteur.js"></script>
+        <script defer src="graph.js"></script>
+        <script defer src="boutons.js"></script>  
+    </head>   
     
-        <footer>
+    <body>
 
-        </footer>
+        <section id="backg1">    
+            
+            <h1>CONSOMMATION D'EAU EN FRANCE</h1>
+   
+            <h3>Face à cette crise imminente, la nécessité d'une approche collective et durable <br>
+            pour la préservation des nappes phréatiques devient de plus en plus évidente. <br>
+            La préservation de ces ressources vitales ne concerne pas seulement les autorités publiques,<br>
+            mais aussi chaque citoyen, appelé à adopter des comportements éco-responsables <br>
+            afin de garantir un avenir durable pour nos réserves d'eau souterraine.
+            </h3>
+        
+            <button type="button" class="voir-conso">Découvre ta conso d'eau</button>
+        
+        </section>    
+
+        
+        
+        <section id="backg2" >
+        
+            <h2>CONSOMMATION EN TEMPS RÉEL</h2>
+    
+            <div class = "rectangle" >
+            <div class = "compteur">
+                <p id = "conso-jour"></p>
+                <p id = "conso-seconde"></p>
+                <p id = "conso-ville"></p>
+                <p id = "nappe-villeurbanne"></p>
+            </div>
+  
+            <div class = "terre">
+                <div class = "herbe"></div>
+                <div class = "humus"></div>
+                <div class = "sol"></div>
+                <div class = "nappe">    
+                    <button type="button" class="voir-utilisation">Découvre où va l'eau de la nappe</button>
+                </div>
+            </div> 
+    
+            <div class=" cont-gouttes">
+                <div class="drop-container1"><div class="drop"></div></div>
+                <div class="drop-container2"><div class="drop"></div></div>
+                <div class="drop-container3"><div class="drop"></div></div>
+                <div class="drop-container4"><div class="drop"></div></div>
+            </div>
+        
+        </section>
+    
+
+        <section id="backg3">
+           
+            <div class="canva">
+                <canvas id ="myChart"></canvas>
+                <button type="button" class="voir-nappe">Découvre l'état de la nappe de Villeurbanne</button>
+            </div>
+    
+        </section>
+
+
+        <section id="backg4">
+            
+            <h4>NIVEAU DE LA NAPPE PHRÉATIQUE EN TEMPS RÉEL</h4>
+            
+            <div> 
+                <canvas id="graphe-nappe"></canvas>
+            </div>    
+
+        </section>    
     </body>
 </html>

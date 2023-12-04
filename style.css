@@ -5,8 +5,9 @@ html {
     font-family: 'Oswald';
     font-size: 15px;
     font-weight: bold;
-    color : black;
+    color: black;
 }
+
 body {
     height: 100%;
     width: 100%;
@@ -14,33 +15,39 @@ body {
     overflow-x: hidden;
 }
 
-#backg1{
+#backg1 {
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 1s;   
+    transition: 1s;
 }
-#backg2{
+
+#backg2 {
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 1s;   
+    transition: 1s;
 }
-#backg3{
+
+#backg3 {
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 1s;   
+    transition: 1s;
+    justify-content: center
+    ;
 }
-#backg4{
+
+#backg4 {
     background-repeat: no-repeat;
     background-size: cover;
-    transition: 1s;   
+    transition: 1s;
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh ;
     width: 100vw;
     margin: 0%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -59,24 +66,23 @@ h3 {
     font-style: 'Oswald';
     font-style: bold;
     font-size: 28px;
-    color:black;
+    color: black;
     margin: 0;
     justify-content: center;
 }
+
 h2 {
-    position: absolute;
     text-align: center;
     font-style: 'Oswald';
     font-style: bold;
     font-size: 28px;
-    color:black;
+    color: black;
     margin: 1000, 150, 1000auto;
-    text-indent: 550px;
 }
 
 button {
     display: flex;
-    background-color:  #0077B6;
+    background-color: #0077B6;
     border-radius: 10px;
     border: 4px;
     text-align: center;
@@ -88,26 +94,27 @@ button {
     opacity: 0.75;
 
 }
+
 .rectangle {
-    width  : 600px;
-    height : 570px;
-    margin: 5% auto;
-    background :linear-gradient(#0077B6,#00B4D8,#90E0EF,#CAF0F8);
+    width: 600px;
+    height: 570px;
+    margin: 0% auto;
+    background: linear-gradient(#0077B6, #00B4D8, #90E0EF, #CAF0F8);
     border-radius: 10%;
-    
+
 }
 
 .compteur {
-    width : 350px;
-    height : 230px;
-    margin : 5% auto;
-    background :linear-gradient(#CAF0F8,#90E0EF,#00B4D8);
+    width: 350px;
+    height: 230px;
+    margin: 5% auto;
+    background: linear-gradient(#CAF0F8, #90E0EF, #00B4D8);
     border-radius: 10%;
-    border : solid black;
+    border: solid black;
 }
 
 .compteur p {
-    color : black;
+    color: black;
     text-align: center;
     padding: 2%;
     font-family: 'Oswald';
@@ -116,7 +123,7 @@ button {
 
 .terre {
     width: 550px;
-    height:220px;
+    height: 220px;
     margin: 10% auto;
     border: solid black;
     background: url(nappe-phreatique.jpg);
@@ -124,21 +131,21 @@ button {
     border-bottom-left-radius: 20%;
     border-bottom-right-radius: 20%;
     overflow: hidden;
-    
+
 }
 
 .herbe {
     width: 550px;
     height: 10px;
     margin: auto;
-    background:url(herbe.jpg);
+    background: url(herbe.jpg);
     background-size: cover;
 }
 
 .humus {
     width: 550px;
     height: 18px;
-    margin: 0% auto ;
+    margin: 0% auto;
     background: url(humus.jpg);
     background-size: cover;
 }
@@ -168,38 +175,45 @@ button {
     0% {
         background-position: -1200px 15px;
     }
+
     100% {
         background-position: 550px 162px;
     }
 }
-.drop{
-  width: 90px;
-  height: 90px;
-    background:linear-gradient(rgb(74, 74, 204) ,#00B4D8) ;
-  border-radius: 50% ;
-  border: 5px solid #fff;
-  border-top-right-radius: 0%;
-  transform: rotate(-45deg);
-  margin-top: 50px;
-  margin-left: 20px;
+
+.drop {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(rgb(74, 74, 204), #00B4D8);
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-top-right-radius: 0%;
+    transform: rotate(-45deg);
+    margin-top: 50px;
+    margin-left: 20px;
+    overflow: hidden;
 
 }
-.cont-gouttes{
-display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-100px);
-  margin: -3% auto;
-  
+
+.cont-gouttes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100px);
+    margin: -3% auto;
+
 }
-#myChart{
-  background-color:white;
-  margin: 15% auto 5%;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid black;
+.canva {
+    margin-top: 1%;
+}
+#myChart {
+    background-color: rgb(139, 184, 203);
+    margin: 18% auto 5%;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
 }
 
 h4 {
@@ -208,16 +222,14 @@ h4 {
     font-style: 'Oswald';
     font-style: bold;
     font-size: 28px;
-    color:black;
-   
-    text-indent: 450px;
+    color: black;
 }
 
-#graphe-nappe{
+#graphe-nappe {
     background: url(villeurbanne.jpg);
-    color : black;
+    color: black;
     border: solid black;
-    margin: 7% auto;
+    margin: 7% auto 0 auto;
     width: 1100px;
     height: 500px;
 }
